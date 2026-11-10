@@ -3,8 +3,8 @@ resource "aws_instance" "mongodb" {
   ami = var.ami_id
   vpc_security_group_ids = [aws_security_group.mongodb.id]
 
-  tags = var.ec2_tags
 }
+
 
 resource "aws_security_group" "mongodb" {
   name        = "mongodb"
